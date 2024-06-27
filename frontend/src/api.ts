@@ -1,18 +1,20 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/auth';
+// const API_URL = 'http://localhost:5000/api/auth';
+
+const API_URL = 'https://chat-application-backend-alpha.vercel.app/';
 
 interface UserData {
   email: string;
   password: string;
 }
 
-export const register = (userData: UserData) => axios.post(`${API_URL}/register`, userData);
-export const login = (userData: UserData) => axios.post(`${API_URL}/login`, userData);
+export const register = (userData: UserData) => axios.post(`${API_URL}/api/auth/register`, userData);
+export const login = (userData: UserData) => axios.post(`${API_URL}/api/auth/login`, userData);
 
 export const fetchUsers = async (token: string) => {
   try {
-    const response = await fetch('http://localhost:5000/api/users', {
+    const response = await fetch('https://chat-application-backend-alpha.vercel.app/api/users', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
