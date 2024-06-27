@@ -47,3 +47,98 @@ To set up the project locally, follow these steps:
 ```bash
 git clone https://github.com/yourusername/ChatApplication.git
 cd ChatApplication
+
+
+Backend Setup
+Navigate to the backend directory:
+bash
+Copy code
+cd Backend
+Install backend dependencies:
+bash
+Copy code
+npm install
+Create a .env file in the Backend directory and add the following environment variables:
+env
+Copy code
+PORT=5000
+MONGODB_URI=mongodb://localhost:27017/chatapp
+JWT_SECRET=your_jwt_secret
+Start the backend server:
+bash
+Copy code
+npm start
+Frontend Setup
+Navigate to the frontend directory:
+bash
+Copy code
+cd ../frontend
+Install frontend dependencies:
+bash
+Copy code
+npm install
+Start the frontend development server:
+bash
+Copy code
+npm start
+The application should now be running at http://localhost:3000.
+
+Usage
+Open your browser and navigate to http://localhost:3000.
+Register a new user or log in with an existing account.
+Select a user from the user list to start chatting.
+Send and receive messages in real-time.
+Project Structure
+java
+Copy code
+ChatApplication/
+├── Backend/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── app.js
+│   ├── server.js
+│   └── .env
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── api/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── App.tsx
+│   │   ├── index.tsx
+│   │   └── ...
+│   ├── .env
+│   ├── package.json
+│   └── ...
+├── README.md
+└── package.json
+API Endpoints
+Here are the main API endpoints available in the backend:
+
+Authentication
+POST /api/register - Register a new user
+POST /api/login - Log in an existing user
+Users
+GET /api/users - Get the list of users
+Messages
+GET /api/messages/:userId - Get messages for a specific user
+Contributing
+Contributions are welcome! Please follow these steps:
+
+Fork the repository
+Create a new branch (git checkout -b feature/your-feature-name)
+Make your changes and commit them (git commit -m 'Add new feature')
+Push to the branch (git push origin feature/your-feature-name)
+Create a new Pull Request
+License
+This project is licensed under the MIT License.
+
+Acknowledgements
+React
+Material-UI
+Node.js
+Express
+MongoDB
+WebSocket
+Axios
